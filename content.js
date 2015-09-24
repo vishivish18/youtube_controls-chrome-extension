@@ -12,10 +12,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   
   if (request.msg == 'Playing') {  	
     pause();
-    sendResponse({msg: 'Action', data: playButton});
+    sendResponse({msg: 'Action', data: videoElement});
   }
   else if (request.msg == 'Not playing') {  	
     play();
-    sendResponse({msg: 'Action', data: playButton});
+    sendResponse({msg: 'Action', data: videoElement});
   }
 });
